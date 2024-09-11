@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from .views import download_resume
 from .views import contact_view
-from .views import github_profile
+
 from .views import resume
 from .views import projects
 urlpatterns=[
