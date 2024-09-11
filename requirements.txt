@@ -1,12 +1,14 @@
 asgiref 
 certifi==2024.8.30
 charset-normalizer==3.3.2
-Django 
-gunicorn 
-packaging
+Django
+gunicorn
+idna==3.8
+packaging 
 requests==2.32.3
 setuptools==72.2.0
 sqlparse 
 typing_extensions 
 urllib3==2.2.2
 wheel==0.44.0
+whitenoise==6.7.0

@@ -5,7 +5,7 @@ from .models import Resume
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .github_utils import get_github_repositories, get_github_user
+
 
 # Create your views here.
 def home(request):
