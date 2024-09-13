@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: portfolio
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate
+      python manage.py collectstatic --noinput
+    startCommand: gunicorn portfolio.wsgi:application --preload --bind 0.0.0.0:10000
+    staticPublishPath: staticfiles
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: portfolio.settings
+      - key: SECRET_KEY
+        value: django-insecure-d0^g+ffs+$jf(w7eg_5&7k2g0rf7f^*b#ciq-8=4u)&g83ekry
+      - key: DEBUG
+        value: 'False'
+      - key: ALLOWED_HOSTS
+        value: portfolio-a986.onrender.com
+    healthCheckPath: /
+    plan: free

@@ -12,3 +12,4 @@ typing_extensions
 urllib3==2.2.2
 wheel==0.44.0
 whitenoise==6.7.0
+
