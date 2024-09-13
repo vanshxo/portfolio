@@ -7,7 +7,6 @@ services:
       python manage.py migrate
       python manage.py collectstatic --noinput
     startCommand: gunicorn portfolio.wsgi:application --preload --bind 0.0.0.0:10000
-    staticPublishPath: staticfiles
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: portfolio.settings
